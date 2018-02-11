@@ -26,6 +26,6 @@ class ReviewsController < ApplicationController
 	end
 
 	def set_movie
-		@movie = Moive.find(params[:movie_id])
+		@movie = Movie.find(params[:movie_id])
 	end
 end

@@ -39,7 +39,6 @@ For example, calling `console` in a view will display a console in the current
 page in the context of the view binding.
 
 ```html
-<% console %>
 ```
 
 Calling `console` in a controller will result in a console in the context of

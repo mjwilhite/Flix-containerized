@@ -47,9 +47,9 @@ private
     params.require(:user).
       permit(:name, :email, :password, :password_confirmation)
     end
-  end
+
   def require_correct_user
     @user = User.find(params[:id])
     redirect_to root_url unless current_user?(@user)
-    end
+  end
 end

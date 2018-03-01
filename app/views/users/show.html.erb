@@ -3,7 +3,6 @@
       <h1><%= @user.name %></h1>
       <h2><%= mail_to(@user.email) %></h2>
     </header>
-</article>
 
 <% if @reviews.any? %>
   <h3>Reviews</h3>
@@ -21,6 +20,17 @@
   </ol>
 <% end %>
 
+<% if @favorite_movies.any? %>
+  <h3>Favorite Movies</h3>
+  <ul>
+    <% @favorite_movies.each do |movie| %>
+      <li>
+        <%= link_to movie.title, movie %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
 <footer>
   <nav>
     <% if current_user?(@user) %>
@@ -32,3 +42,4 @@
     <% end %>
   </nav>
 </footer>
+</article>

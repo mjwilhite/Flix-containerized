@@ -3,6 +3,8 @@
     <li>
       <article class="movie">
         <header>
+          <% puts movie.title %>
+          <% puts link_to movie.title, movie %>
           <%= image_for(movie) %>
           <% puts link_to movie.title, movie %>
           <h2><%= link_to movie.title, movie %> (<%= movie.released_on.year %>)</h2>

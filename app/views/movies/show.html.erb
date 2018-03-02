@@ -24,31 +24,6 @@
       <%= button_to "Fave", movie_favorites_path(@movie) %>
     <% end %>
   <% end %>
-  <header>
-     <%= image_for(@movie) %>
-     <h1><%= @movie.title %></h1>
-     <h2>Released: <%= @movie.released_on %></h2>
-   </header>
-
-   <p>
-     <%= @movie.description %>
-   </p>
-
-   <h3 class="no-rule">
-     <%= @movie.rating %> &bull; <%= @movie.duration %>
-   </h3>
-
-   <p>
-     <%= pluralize(@fans.size, 'fan') %>
-   </p>
-   
-   <% if current_user %>
-      <% if @current_favorite %>
-        <%= button_to "Unfave", movie_favorite_path(@movie, @current_favorite), method: :delete %>
-      <% else %>
-        <%= button_to "Fave", movie_favorites_path(@movie) %>
-      <% end %>
-   <% end %>
 
 <% content_for :side do %>
 <% if @fans.any? %>

@@ -10,7 +10,7 @@ class MoviesController < ApplicationController
     when 'flops'
       @movies = Movie.flops
     when 'upcoming'
-      @movies = Movie.Upcoming
+      @movies = Movie.upcoming
     when 'recent'
       @movies = Movie.recent
     else
